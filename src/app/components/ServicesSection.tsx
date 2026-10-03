@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { PenTool, Globe, ShoppingBasket, Code2, Sparkles } from "lucide-react";
+import { PenTool, Globe, ShoppingBasket, Code2, Sparkles, Database } from "lucide-react";
 import { DottedBg } from "./shared/DottedBg";
 import { ScrollReveal } from "./shared/ScrollReveal";
 
@@ -11,7 +11,7 @@ const CARDS = [
     title: "design",
     tags: "branding · ui/ux · identity · packaging",
     desc: "Fueled by strategy and backed by strong technical ability and experience, we execute designs that are purposeful as well as beautiful",
-    bgImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+    bgImage: "/images/team_artifact_1782480085547.png",
     iconColor: "#00E676", // Green
     Icon: PenTool,
     href: "/services/design",
@@ -27,14 +27,14 @@ const CARDS = [
     href: "/services/web",
   },
   {
-    id: "commerce",
-    title: "e-com",
-    tags: "online-store · mobile development · social com",
-    desc: "Create a seamless shopping experience online in different sales channels via delivering an omnichannel strategy",
-    bgImage: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2574&auto=format&fit=crop",
-    iconColor: "#FF1744", // Pink/Red
-    Icon: ShoppingBasket,
-    href: "/services/e-com",
+    id: "database",
+    title: "database",
+    tags: "schema design · migrations · managed db",
+    desc: "Design, migrate and operate reliable database systems for web and mobile products.",
+    bgImage: "/images/integrity_artifact_1782480057845.png",
+    iconColor: "#00BCD4",
+    Icon: Database,
+    href: "/services/database",
   },
   {
     id: "pro",
@@ -52,7 +52,7 @@ const CARDS = [
     title: "arch ai",
     tags: "ai workflows · automation",
     desc: "Arch AI is our flagship product — a conversational business intelligence platform built for modern African enterprises.",
-    bgImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop",
+    bgImage: "/images/aura_ai_chat.png",
     iconColor: "#FF3D00", // Orange
     Icon: Sparkles,
     href: "/services/aura-ai",
@@ -71,10 +71,8 @@ function ServiceCard({ card, delay }: { card: typeof CARDS[0], delay: number }) 
       className="h-full"
     >
       <Link to={card.href}
-        className="block relative flex flex-col justify-between overflow-hidden cursor-pointer w-full group h-full"
+        className="group relative block h-full w-full overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/75 p-5 shadow-[0_14px_30px_rgba(15,23,42,0.06)] backdrop-blur-xl transition-all duration-400 hover:-translate-y-1.5 hover:border-indigo-300/80 hover:shadow-[0_26px_60px_rgba(79,70,229,0.14)] md:p-7"
         style={{
-          borderRadius: "24px",
-          padding: "32px",
           minHeight: "420px",
           textDecoration: "none",
         }}
@@ -84,45 +82,59 @@ function ServiceCard({ card, delay }: { card: typeof CARDS[0], delay: number }) 
         <motion.div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${card.bgImage})`, willChange: "transform" }}
-          animate={{ scale: hovered ? 1.05 : 1 }}
+          animate={{ scale: hovered ? 1.06 : 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
 
-        {/* Gradient overlay to ensure text readability */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/0 via-black/10 to-black/60 pointer-events-none opacity-90 mix-blend-multiply" />
+        <div
+          className="absolute inset-0 z-0 transition-opacity duration-500"
+          style={{
+            background: `linear-gradient(135deg, rgba(255,255,255,0.1), rgba(15,23,42,0.12) 32%, rgba(15,23,42,0.74) 100%)`,
+            opacity: hovered ? 0.94 : 0.9,
+          }}
+        />
 
-        {/* Top: Circular Icon */}
-        <div className="relative z-10 mb-16">
-          <div 
-            className="w-12 h-12 rounded-full flex items-center justify-center text-black shadow-lg"
-            style={{ backgroundColor: card.iconColor }}
-          >
-            <card.Icon size={22} strokeWidth={2.5} />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_28%)] opacity-100" />
+        <div
+          className="absolute -right-10 -top-10 z-0 h-28 w-28 rounded-full blur-3xl transition-opacity duration-500"
+          style={{ backgroundColor: `${card.iconColor}66`, opacity: hovered ? 1 : 0.8 }}
+        />
+
+        <div className="relative z-10 flex h-full flex-col justify-between">
+          <div className="mb-12 flex items-center justify-between">
+            <div
+              className="flex h-12 w-12 items-center justify-center rounded-full text-slate-950 shadow-[0_12px_30px_rgba(255,255,255,0.15)]"
+              style={{ backgroundColor: card.iconColor }}
+            >
+              <card.Icon size={22} strokeWidth={2.5} />
+            </div>
+
+            <span className="rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm">
+              service
+            </span>
           </div>
-        </div>
 
-        {/* Bottom: Title, Desc, Line, Tags */}
-        <div className="relative z-10 flex flex-col mt-auto transform-gpu">
-          <h3 className="font-['Space_Grotesk'] text-[56px] md:text-[72px] font-medium leading-[1] text-black tracking-[-0.04em] lowercase mb-4 drop-shadow-md transition-transform duration-300 group-hover:translate-x-2">
-            {card.title}
-          </h3>
-          <p className="font-['Inter'] text-[15px] text-black/95 leading-[1.5] max-w-[95%] font-medium drop-shadow-md mb-6">
-            {card.desc}
-          </p>
-          
-          <hr className="border-white/30 mb-5" />
+          <div className="flex flex-col">
+            <h3 className="mb-4 font-['Space_Grotesk'] text-[40px] font-medium leading-[0.96] tracking-[-0.05em] lowercase text-white drop-shadow-[0_12px_18px_rgba(15,23,42,0.35)] transition-transform duration-300 group-hover:translate-x-1 md:text-[52px]">
+              {card.title}
+            </h3>
 
-          <div className="flex flex-row w-full gap-2">
-            {card.tags.split(" · ").map(tag => (
-              <div 
-                key={tag} 
-                className="flex-auto min-w-0 flex justify-center items-center px-2 py-1.5 rounded-[100px] border border-white/40 bg-white/10 backdrop-blur-md transition-colors duration-300 group-hover:bg-white/20"
-              >
-                <span className="text-[11px] lg:text-[13px] font-medium lowercase tracking-wide font-['Inter'] text-black whitespace-nowrap overflow-hidden text-ellipsis block">
+            <p className="mb-6 max-w-[95%] text-[14px] font-medium leading-[1.6] text-white/90 drop-shadow-[0_6px_12px_rgba(15,23,42,0.32)] md:text-[15px]">
+              {card.desc}
+            </p>
+
+            <div className="mb-5 h-px w-full bg-gradient-to-r from-white/60 via-white/25 to-transparent" />
+
+            <div className="flex flex-wrap gap-2">
+              {card.tags.split(" · ").map(tag => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/25 bg-white/10 px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] text-white/80 backdrop-blur-md md:text-[11px]"
+                >
                   {tag}
                 </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </Link>

@@ -8,7 +8,7 @@ export const SKDigitechHero = () => {
   const [typedText, setTypedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   
-  const headlineText = "Experience liftoff with the next-gen digital agency.";
+  const headlineText = "Interlligent software systems, built to scale.";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -53,7 +53,7 @@ export const SKDigitechHero = () => {
       {/* Content Container */}
       <div className="relative flex flex-col items-center text-center px-4 md:px-6 z-10 w-full max-w-[1400px]">
         
-        {/* arch computing branding */}
+        {/* arch branding */}
         <motion.div
           className="mb-8 md:mb-12 flex items-center justify-center gap-3"
           initial={{ opacity: 0, y: 10 }}
@@ -62,14 +62,13 @@ export const SKDigitechHero = () => {
         >
           <img
             src={BRAND_LOGO}
-            alt="arch computing"
+            alt="arch"
             className="object-contain filter invert opacity-90 h-6 md:h-8"
           />
           <span className="font-['Google_Sans_Flex','Inter',sans-serif] text-xl md:text-2xl tracking-tight flex items-center">
             <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#9CA3AF] to-[#A1A1AA]">
-              arch
+              -
             </span>
-            <span className="font-normal text-[#F9FAFB] ml-1">computing</span>
           </span>
         </motion.div>
 

@@ -12,7 +12,46 @@
 }
 
 @utility bg-gradient-primary {
-  background: linear-gradient(90deg, #F7A521, #9C27B0, #5A53C8);
+  background: linear-gradient(90deg, #4e26ff 0%, #4e26ff 100%);
+}
+
+@utility ui-card {
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 50px rgba(59, 41, 122, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+@utility ui-surface {
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+@utility btn-primary {
+  background: linear-gradient(90deg, #4e26ff 0%, #4e26ff 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 16px 35px rgba(78, 38, 255, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+@utility btn-secondary {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #111827;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+@layer components {
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 20px 45px rgba(25, 40, 248, 0.822);
+    filter: saturate(1.06);
+  }
+
+  .btn-secondary:hover {
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  }
 }
 
 @utility bg-dotted {

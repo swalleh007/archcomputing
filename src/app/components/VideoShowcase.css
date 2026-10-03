@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #ffffff;
+  background: radial-gradient(1200px 600px at 10% 20%, rgba(78,38,255,0.06), transparent 8%), radial-gradient(900px 500px at 90% 80%, rgba(235,255,0,0.06), transparent 10%), #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,36 @@
   padding: 120px 0 200px;
 }
 
+/* Decorative blobs matching Digitall artboard accents */
+.bg-blob-left,
+.bg-blob-right {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.9;
+  filter: blur(28px) saturate(120%);
+}
+.bg-blob-left {
+  left: -10%;
+  top: 6%;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle at 30% 30%, rgba(78,38,255,0.14), rgba(78,38,255,0.06) 40%, transparent 60%);
+  transform: translateZ(0) rotate(-12deg);
+}
+.bg-blob-right {
+  right: -6%;
+  bottom: -4%;
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(circle at 70% 70%, rgba(235,255,0,0.12), rgba(78,38,255,0.04) 36%, transparent 60%);
+  transform: translateZ(0) rotate(8deg);
+}
+
 .video-showcase-inner {
   position: relative;
   width: 100%;
-  max-width: 1600px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,11 +56,12 @@
    ======================================== */
 
 .video-player-outer {
-  width: calc(100vw - 48px);
+  /* Centered large player with responsive max width */
+  width: min(1600px, calc(100% - 48px));
   max-width: 1600px;
   aspect-ratio: 16 / 9;
-  min-height: 600px;
-  background-color: #000000;
+  min-height: 420px;
+  background: linear-gradient(180deg, #0b0b0f 0%, #050507 60%);
   border-radius: 28px;
   box-shadow: 0 24px 80px -12px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -46,6 +73,8 @@
   justify-content: center;
   align-items: center;
   will-change: transform, opacity;
+  box-sizing: border-box;
+  padding: 12px;
 }
 
 .video-player-outer.is-playing {
@@ -57,8 +86,9 @@
    ======================================== */
 
 .cinematic-stage {
-  width: 75%;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 1600px;
+  aspect-ratio: 16 / 8.5;
   position: relative;
   background: linear-gradient(145deg, #0d0d0d 0%, #050505 55%, #0a0a0a 100%);
   border-radius: 12px;
@@ -100,7 +130,7 @@
 
 .services-text {
   margin: 0;
-  font-size: clamp(3rem, 7.5vw, 5.75rem);
+  font-size: clamp(3.8rem, 8.5vw, 7.75rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -112,6 +142,91 @@
   text-transform: uppercase;
   max-width: 92%;
   filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.12));
+}
+
+/* Responsive typography and spacing */
+@media (max-width: 1024px) {
+  .video-showcase-section {
+    padding: 80px 0 120px;
+  }
+
+  .video-player-outer {
+    width: calc(100% - 32px);
+    min-height: 320px;
+    padding: 10px 8px 18px;
+    border-radius: 20px;
+  }
+
+  .cinematic-stage {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .services-text {
+    font-size: clamp(2.2rem, 6.5vw, 4.25rem);
+    letter-spacing: -0.02em;
+  }
+
+  .stage-title {
+    font-size: 0.95rem;
+  }
+
+  .stage-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .play-circle {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-showcase-section {
+    padding: 48px 0 80px;
+    min-height: 60vh;
+  }
+
+  .video-player-outer {
+    width: calc(100% - 24px);
+    min-height: 220px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+
+  .cinematic-stage {
+    aspect-ratio: 16 / 9;
+  }
+
+  .services-text {
+    font-size: clamp(1.6rem, 8.5vw, 2.6rem);
+    line-height: 1.02;
+  }
+
+  .stage-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  .stage-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .play-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .play-circle svg {
+    width: 20px; height: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .video-player-outer {
+    max-width: 1400px;
+  }
 }
 
 /* ========================================
@@ -177,8 +292,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  color: #111111;
+  background: linear-gradient(90deg, #ebff00, #f7a521);
+  color: #06060a;
   padding: 10px 18px;
   border-radius: 999px;
   font-size: 13px;
@@ -189,6 +304,25 @@
   white-space: nowrap;
   transform: translate(-50%, -50%);
   will-change: left, top;
+}
+
+/* Small circular play button used inside the player */
+.play-circle {
+  width: 96px;
+  height: 96px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  transition: transform 0.28s ease, background 0.2s ease;
+}
+.play-circle:hover {
+  transform: scale(1.06);
+  background: linear-gradient(90deg, rgba(78,38,255,0.12), rgba(235,255,0,0.06));
 }
 
 .play-intro-button span {
@@ -221,18 +355,13 @@
   }
 
   .video-player-outer {
-    width: calc(100vw - 32px);
-    aspect-ratio: auto;
-    height: 50vh;
-    border-radius: 24px;
-  }
-
-  .cinematic-stage {
-    width: 85%;
-    border-radius: 10px;
-  }
-
-  .services-text {
+    /* Make player large and near full-bleed like Digitall */
+    width: 100vw;
+    max-width: 1800px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 16 / 7.5;
+    min-height: 560px;
     font-size: clamp(2rem, 6vw, 3.75rem);
   }
 }

@@ -173,9 +173,38 @@
 
 .support-cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .support-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .support-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-page {
+    overflow-x: hidden;
+  }
+
+  .support-main {
+    padding-top: 5rem;
+  }
+
+  .support-hero-title {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .support-card {
+    padding: 1.5rem;
+  }
 }
 
 .support-card {

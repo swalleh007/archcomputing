@@ -1,14 +1,15 @@
-import brandLogo from "../imports/sk_digitech_logo-1.png";
+// @ts-ignore - image import declaration
+import brandLogo from "../imports/arch_logo.png";
 
 export const BRAND = {
-  name: "arch computing",
+  name: "arch",
   shortName: "arch",
-  longName: "computing",
-  legalName: "arch computing",
+  longName: "",
+  legalName: "arch",
   logo: brandLogo,
-  tagline: "Experience liftoff with the next-gen agent platform.",
-  contactEmail: "info@archcomputing.com",
-  sessionKey: "arch_computing_has_visited",
+  tagline: "Build Reliable Systems.",
+  contactEmail: "info@arch.com",
+  sessionKey: "arch_has_visited",
 } as const;
 
 export const BRAND_LOGO = brandLogo;

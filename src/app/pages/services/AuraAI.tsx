@@ -36,16 +36,19 @@ function AuraIntelligenceCore({ navigate }: { navigate: any }) {
           </div>
 
           <h1 className="text-[clamp(60px,7vw,120px)] leading-[0.85] tracking-[-0.04em] font-bold text-black mb-8">
-            customer service<br />
+            increase leads<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff66] to-[#dfff00]">without limits</span>
           </h1>
 
           <p className="text-black/60 text-lg leading-relaxed max-w-[480px] font-light mb-12">
-            Arch is not a chat wrapper. It is a multi-agent cognitive architecture built to understand deep context, reason through systemic complexity, and execute business-critical actions natively.
+            Arch is not a chat wrapper. Its a self-improving ai agent cognitive architecture built to understand deep context, reason through systemic complexity, and execute business-critical actions natively.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(247,165,33,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2 group w-max">
+            <button
+              onClick={() => navigate("?contact=true")}
+              className="bg-gradient-primary text-white px-8 py-4 rounded-full font-bold text-sm transform-gpu transition duration-300 hover:shadow-[0_0_30px_rgba(78,38,255,0.6)] hover:-translate-y-1 flex items-center justify-center gap-2 group w-max focus:outline-none focus-visible:ring-4 focus-visible:ring-[#4e26ff]/20"
+            >
               Deploy Intelligence <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -68,18 +71,12 @@ const AURA_PLATFORM_LAYERS = [
   { icon: MessageSquareText, title: "Human handoff", desc: "Escalates complex or sensitive cases with all the relevant context already attached." },
   { icon: ShieldCheck, title: "Embed anywhere", desc: "Works across web, messaging, and internal tools while keeping governance in place." }
 ];
-const AURA_CAPABILITIES = [
-  { icon: MessageSquareText, title: "Support AI", desc: "Instantly resolve tier-1 and tier-2 tickets with perfect context." },
-  { icon: Zap, title: "Automation", desc: "Connect disparate APIs to execute complex multi-step tasks natively." },
-  { icon: Database, title: "Knowledge Mgmt", desc: "Turn disorganized company wikis into an omniscient oracle." },
-  { icon: LineChart, title: "Business Intel", desc: "Chat with your SQL database to extract immediate insights." },
-  { icon: ShieldCheck, title: "Compliance", desc: "Automate policy adherence checks across internal communications." },
-  { icon: Target, title: "Sales Enablement", desc: "Auto-generate hyper-personalized outbound sequences." }
-];
+
 
 export function AuraAI() {
   const prefersReducedMotion = useReducedMotion();
   const navigate = useNavigate();
+  const motionProps = (props: any) => (prefersReducedMotion ? {} : props);
 
   useEffect(() => {
     document.title = "Arch AI | Autonomous Cognitive Architecture";
@@ -98,40 +95,11 @@ export function AuraAI() {
 
         <AuraIntelligenceCore navigate={navigate} />
 
-        {/* Capability Showcase */}
-        <section className="py-[140px] px-6 md:px-12 max-w-[1600px] mx-auto w-full border-b border-slate-300 relative z-10">
-          <div className="flex justify-between items-end mb-20">
-            <h2 className="text-[clamp(40px,5vw,80px)] font-bold leading-[0.9] tracking-[-0.03em]">
-              capabilities
-            </h2>
-            <NeonPill color="yellow">Neural Network</NeonPill>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {AURA_CAPABILITIES.map((cap, i) => (
-              <m.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="p-10 bg-white border border-slate-300 rounded-[32px] hover:bg-slate-50 hover:border-[#00ff66]/50 transition-all duration-500 group overflow-hidden relative"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ff66]/10 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-14 h-14 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center mb-8 text-[#00ff66] group-hover:scale-110 transition-transform duration-500">
-                  <cap.icon size={24} className="stroke-[1.5px]" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 tracking-tight relative z-10">{cap.title}</h3>
-                <p className="font-light text-black/50 leading-relaxed relative z-10">{cap.desc}</p>
-              </m.div>
-            ))}
-          </div>
-        </section>
 
         <section className="py-[140px] px-6 md:px-12 max-w-[1600px] mx-auto w-full border-b border-slate-300 relative z-10">
           <div className="flex justify-between items-end mb-20">
             <h2 className="text-[clamp(40px,5vw,80px)] font-bold leading-[0.9] tracking-[-0.03em]">
-              key features
+              features
             </h2>
             <NeonPill color="green">Adaptive Systems</NeonPill>
           </div>
@@ -157,34 +125,9 @@ export function AuraAI() {
           </div>
         </section>
 
-        <section className="py-[140px] px-6 md:px-12 max-w-[1600px] mx-auto w-full border-b border-slate-300 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Web & Apps", desc: "Handle repetitive support requests, triage issues, and route cases to the right team instantly." },
-              { title: "Ecommerce store", desc: "Qualify leads, answer product questions, and book meetings while the opportunity is still hot." },
-              { title: "Operations", desc: "Streamline internal operations by automating handoffs, approvals, and system updates." },
-              { title: "Knowledge access", desc: "Answer policy, process, and product questions from a single connected knowledge layer." },
-              { title: "Service teams", desc: "Support frontline teams with faster response times and better customer context." },
-              { title: "Internal agents", desc: "Give teams a trusted digital teammate that helps them move faster without extra overhead." }
-            ].map((useCase, i) => (
-              <m.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="p-10 bg-white border border-slate-300 rounded-[32px] hover:bg-slate-50 hover:border-[#00ff66]/50 transition-all duration-500 group overflow-hidden relative"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ff66]/10 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="w-14 h-14 rounded-2xl bg-slate-100 border border-slate-300 flex items-center justify-center mb-8 text-[#00ff66] group-hover:scale-110 transition-transform duration-500">
-                  <span className="text-lg font-bold">0{i + 1}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 tracking-tight relative z-10">{useCase.title}</h3>
-                <p className="font-light text-black/50 leading-relaxed relative z-10">{useCase.desc}</p>
-              </m.div>
-            ))}
-          </div>
-        </section>
+        
+
+        
 
         {/* Business Outcomes */}
         <section className="py-[140px] px-6 md:px-12 max-w-[1600px] mx-auto w-full border-b border-slate-300 relative z-10">
@@ -232,10 +175,16 @@ export function AuraAI() {
               <span className="text-[#00ff66]">intelligence?</span>
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative z-10">
-              <button onClick={() => navigate("?contact=true")} className="w-full sm:w-auto px-10 py-5 bg-gradient-primary text-black rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(247,165,33,0.6)] hover:-translate-y-1 transition-all duration-300 shadow-lg">
+              <button
+                onClick={() => navigate("?contact=true")}
+                className="w-full sm:w-auto px-10 py-5 bg-gradient-primary text-white rounded-full font-bold text-lg transform-gpu transition duration-300 hover:shadow-[0_0_30px_rgba(78,38,255,0.6)] hover:-translate-y-1 shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-[#4e26ff]/20"
+              >
                 Book a Strategy Session
               </button>
-              <button onClick={() => navigate("/services/web")} className="w-full sm:w-auto px-10 py-5 bg-slate-50 border border-slate-300 text-black rounded-full font-bold text-lg hover:bg-white transition-colors backdrop-blur-md">
+              <button
+                onClick={() => navigate("/services/web")}
+                className="w-full sm:w-auto px-10 py-5 bg-slate-50 border border-slate-300 text-[#111111] rounded-full font-bold text-lg hover:bg-white transition-colors backdrop-blur-md focus:outline-none focus-visible:ring-4 focus-visible:ring-[#4e26ff]/8"
+              >
                 Explore Integrations
               </button>
             </div>

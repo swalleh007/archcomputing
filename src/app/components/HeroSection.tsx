@@ -87,7 +87,6 @@ function ParticleCanvas({ isActive }: { isActive: boolean }) {
       // Create the logo's linear gradient spanning the entire width of the canvas
       const gradient = ctx.createLinearGradient(0, 0, width, 0);
       gradient.addColorStop(0, "#5A53C8"); // Indigo
-      gradient.addColorStop(0.5, "#9C27B0"); // Purple
       gradient.addColorStop(1, "#F7A521"); // Orange
       ctx.fillStyle = gradient;
 
@@ -162,7 +161,7 @@ export function HeroSection() {
   const [typedText, setTypedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   
-  const headlineText = "Experience liftoff with the next-gen agent platform.";
+  const headlineText = "Intelligent software systems, built to scale.";
 
   useEffect(() => {
     if (shouldReduceMotion) {
@@ -201,7 +200,7 @@ export function HeroSection() {
       style={{ 
         minHeight: "100vh",
         backgroundColor: "#0B0F19", // Dark premium palette
-        color: "#F9FAFB",
+        color: "#ffffff",
         paddingTop: "clamp(5rem, 10vw, 10rem)",
         paddingBottom: "clamp(5rem, 10vw, 10rem)",
       }}

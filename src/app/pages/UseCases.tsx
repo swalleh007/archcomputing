@@ -60,7 +60,7 @@ const PROJECTS = [
     // Stunning CSS Mockup for NGO right here
     component: () => (
       <div className="w-full h-full bg-[#E8E1D9] relative overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2670&auto=format&fit=crop')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/images/uc_education_1_1782481941967.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative w-[85%] h-[75%] bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/40 overflow-hidden flex">
           <div className="w-1/4 bg-[#3E5244]/10 border-r border-[#3E5244]/20 p-6 flex flex-col gap-4">
             <div className="h-6 w-24 bg-[#3E5244] rounded-md mb-6" />
@@ -99,7 +99,7 @@ const PROJECTS = [
     // Stunning CSS Mockup for Healthcare App
     component: () => (
       <div className="w-full h-full bg-[#F0F7F9] relative flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('/images/uc_healthcare_1_1782481955830.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative w-[320px] h-[650px] bg-white rounded-[45px] shadow-[0_20px_50px_rgba(0,100,120,0.15)] border-[8px] border-[#E2EFF3] flex flex-col overflow-hidden">
           <div className="pt-12 px-6 pb-6 bg-[#00A3B5] text-black rounded-b-[30px]">
             <div className="text-sm opacity-80 mb-1">Welcome back,</div>
@@ -187,7 +187,7 @@ const PROJECTS = [
     // Stunning CSS Mockup for another NGO
     component: () => (
       <div className="w-full h-full bg-[#0E1E15] relative flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2626&auto=format&fit=crop')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "url('/images/uc_education_1_1782481941967.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0E1E15] via-[#0E1E15]/80 to-transparent" />
         <div className="relative w-[320px] h-[650px] bg-[#122A1C]/90 backdrop-blur-xl rounded-[45px] shadow-2xl border border-white/10 flex flex-col overflow-hidden p-6">
           <div className="flex justify-between items-center text-black mb-8 mt-4">
@@ -234,7 +234,7 @@ const PROJECTS = [
       <div className="w-full h-full bg-[#E5E5E5] relative flex items-center justify-center overflow-hidden">
         <div className="relative w-[90%] h-[80%] bg-white rounded-md shadow-2xl overflow-hidden flex flex-col">
           <div className="flex-1 relative">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" alt="Architecture" className="w-full h-full object-cover" />
+            <img src="/images/uc_education_1_1782481941967.png" alt="Architecture" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/20" />
             <div className="absolute top-12 left-12 text-black">
               <div className="text-sm tracking-[0.2em] uppercase mb-4 font-bold">Studio Archi</div>
@@ -244,8 +244,8 @@ const PROJECTS = [
           <div className="h-24 bg-white flex items-center px-12 justify-between">
             <div className="text-[#111] font-medium">Featured Projects</div>
             <div className="flex gap-4">
-              <div className="w-32 h-16 bg-gray-200 rounded-sm" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600607687985-cecb12fd1c5f?q=80&w=2670&auto=format&fit=crop')", backgroundSize: "cover" }} />
-              <div className="w-32 h-16 bg-gray-200 rounded-sm" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2670&auto=format&fit=crop')", backgroundSize: "cover" }} />
+              <div className="w-32 h-16 bg-gray-200 rounded-sm" style={{ backgroundImage: "url('/images/pro_bg.png')", backgroundSize: "cover" }} />
+              <div className="w-32 h-16 bg-gray-200 rounded-sm" style={{ backgroundImage: "url('/images/web_bg.png')", backgroundSize: "cover" }} />
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@ const PROJECTS = [
     date: "07.24",
     component: () => (
       <div className="w-full h-full bg-[#111] relative flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=2670&auto=format&fit=crop')", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "url('/images/bakery_landing.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
         <div className="relative w-[85%] h-[75%] bg-[#1A1A1A]/80 backdrop-blur-md rounded-2xl border border-white/10 flex overflow-hidden">
           <div className="w-1/2 p-12 flex flex-col justify-center">
@@ -273,7 +273,7 @@ const PROJECTS = [
           </div>
           <div className="w-1/2 relative">
              <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[#A1A1AA] rounded-full blur-[120px] opacity-20" />
-             <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=2670&auto=format&fit=crop" alt="Motorcycle" className="absolute right-0 top-1/2 -translate-y-1/2 w-[120%] object-contain drop-shadow-2xl" style={{ mixBlendMode: "lighten" }} />
+             <img src="/images/bakery_landing.png" alt="Motorcycle" className="absolute right-0 top-1/2 -translate-y-1/2 w-[120%] object-contain drop-shadow-2xl" style={{ mixBlendMode: "lighten" }} />
           </div>
         </div>
       </div>
@@ -349,7 +349,7 @@ export function UseCases() {
               onClick={() => setActiveFilter(cat.id)}
               className={`px-8 py-3 rounded-full font-bold text-sm tracking-wide transition-all duration-300 border ${
                 activeFilter === cat.id 
-                  ? "bg-gradient-primary text-black border-transparent shadow-lg shadow-[#F7A521]/20" 
+                  ? "bg-gradient-primary text-white border-transparent shadow-lg shadow-[#4e26ff]/20"
                   : "bg-white text-gray-500 hover:bg-gray-100 border-gray-200"
               }`}
               style={{ fontFamily: "'Inter', sans-serif" }}

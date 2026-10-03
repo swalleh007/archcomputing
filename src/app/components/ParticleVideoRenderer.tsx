@@ -39,7 +39,7 @@ export const ParticleVideoRenderer: React.FC<ParticleVideoRendererProps> = ({ mo
           radius: Math.random() * (canvas.width * 0.4) + 50,
           angle: Math.random() * Math.PI * 2,
           speed: Math.random() * 0.002 + 0.001,
-          color: isBrand ? "#8B5CF6" : "#FFF8F0", // purple/blue tint or cream white
+          color: isBrand ? "#2e43ff" : "#FFF8F0", // purple/blue tint or cream white
           size: Math.random() * 1.5 + 0.5,
           opacity: Math.random() * 0.1 + 0.15,
         });

@@ -124,29 +124,7 @@ export function CTABand() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center md:justify-end w-full md:w-auto perspective-1000">
-              <motion.button
-                onClick={handleContact}
-                className="group relative flex items-center justify-center gap-2 rounded-full font-bold overflow-hidden"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "18px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.1em",
-                  padding: "0 48px",
-                  height: "64px",
-                  minWidth: "240px",
-                  background: "#6366F1",
-                  color: "#FFFFFF",
-                  transformStyle: "preserve-3d",
-                  border: "none",
-                }}
-                whileHover={{ scale: 1.05, y: -2, boxShadow: "0 10px 30px rgba(99,102,241,0.4)" }}
-                whileTap={{ scale: 0.95, y: 0 }}
-              >
-                <span className="relative z-10 flex items-center gap-2">Start Project <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" /></span>
-              </motion.button>
-            </div>
+            
           </div>
         </ScrollReveal>
       </div>

@@ -1,3 +1,4 @@
+// @ts-ignore - three may not have ambient types in this project
 import * as THREE from 'three';
 
 const snoise = `
@@ -280,7 +281,7 @@ void main() {
 `;
 
 export class SupportParticleEngine {
-    private canvas: HTMLCanvasElement;
+    private canvas!: HTMLCanvasElement;
     private renderer!: THREE.WebGLRenderer;
     private scene!: THREE.Scene;
     private camera!: THREE.OrthographicCamera;
@@ -296,6 +297,8 @@ export class SupportParticleEngine {
     private defaultTex!: THREE.DataTexture;
     private xTex!: THREE.DataTexture;
     private skTex!: THREE.DataTexture;
+    private ytTex!: THREE.DataTexture;
+    private inTex!: THREE.DataTexture;
     
     private targetShapeBlend = 0;
     private currentShapeBlend = 0;
@@ -316,13 +319,23 @@ export class SupportParticleEngine {
     private frameId = 0;
     private isDestroyed = false;
 
-    constructor(private canvas: HTMLCanvasElement) {
+    constructor(canvas: HTMLCanvasElement) {
+        this.canvas = canvas;
+
+        const canvasContext = canvas.getContext('webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' })
+            ?? canvas.getContext('experimental-webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' });
+
+        if (!canvasContext) {
+            throw new Error('WebGL context unavailable');
+        }
+
         this.renderer = new THREE.WebGLRenderer({
-            canvas: this.canvas,
+            canvas: canvas,
             antialias: true,
             alpha: true,
             powerPreference: 'high-performance',
             preserveDrawingBuffer: false,
+            context: canvasContext,
         });
 
         // Strict PixelRatio management: cap at 2 for optimal sharpness on Retina displays
@@ -521,9 +534,9 @@ export class SupportParticleEngine {
         geometry.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
         geometry.setAttribute('seeds', new THREE.BufferAttribute(seeds, 4));
 
-        const color1 = new THREE.Color("#9CA3AF"); // arch computing purple
-        const color2 = new THREE.Color("#A1A1AA"); // arch computing orange
-        const color3 = new THREE.Color("#0033FF"); // arch computing blue
+        const color1 = new THREE.Color("#9CA3AF"); // arch purple
+        const color2 = new THREE.Color("#A1A1AA"); // arch orange
+        const color3 = new THREE.Color("#0033FF"); // arch blue
 
         const particleScale = (window.innerWidth / this.renderer.getPixelRatio() / 2000) * 1.2;
 
@@ -571,7 +584,7 @@ export class SupportParticleEngine {
     private then = Date.now();
 
     private animate = () => {
-        if (this.isDestroyed) return;
+        if (this.isDestroyed || !this.renderer) return;
         this.frameId = requestAnimationFrame(this.animate);
         
         if (this.fpsInterval > 0) {
@@ -587,6 +600,8 @@ export class SupportParticleEngine {
     }
 
     public render() {
+        if (!this.renderer || !this.renderMaterial || !this.simMaterial) return;
+
         const time = this.clock.getElapsedTime();
         const dt = time - this.lastTime;
         this.lastTime = time;
@@ -633,9 +648,9 @@ export class SupportParticleEngine {
         
         if (this.mesh?.geometry) this.mesh.geometry.dispose();
         if (this.simScene) {
-            this.simScene.children.forEach(child => {
-                if ((child as THREE.Mesh).geometry) {
-                    (child as THREE.Mesh).geometry.dispose();
+            this.simScene.children.forEach((child: any) => {
+                if (child?.geometry) {
+                    child.geometry.dispose();
                 }
             });
         }

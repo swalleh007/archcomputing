@@ -7,13 +7,13 @@ const insights = [
     category: "Engineering",
     title: "The Future of Headless Commerce in Africa",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1622790210211-b5c39301578a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYmxvZyUyMGNvdmVyJTIwZGVzaWdufGVufDF8fHx8MTc3OTk4ODM0OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/images/web_bg.png",
   },
   {
     category: "Design",
     title: "Why Minimalist UI Converts Better in 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1695977722806-96e3fc746e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMHRlY2glMjBlZGl0b3JpYWwlMjBlZGl0b3JpYWx8ZW58MXx8fHwxNzc5OTg4MzUyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/images/team_artifact_1782480085547.png",
   }
 ];
 

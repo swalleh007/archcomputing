@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, useReducedMotion } from "motion/react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { ChevronDown, Globe, ShoppingCart, Palette, Bot, Sparkles, ArrowUpRight, Menu, X } from "lucide-react";
+import { ChevronDown, Globe, ShoppingCart, Palette, Bot, Sparkles, ArrowUpRight, Menu, X, Server } from "lucide-react";
 import { BRAND, BRAND_LOGO } from "../brand";
+// @ts-ignore - allow side-effect CSS import in TS
 import "./Navbar.css";
 
 const dropdownContent = {
@@ -16,8 +17,8 @@ const dropdownContent = {
       { icon: <Palette size={18} />, label: "Design", href: "/services/design" },
       { icon: <Globe size={18} />, label: "Web Engineering", href: "/services/web" },
       { icon: <Sparkles size={18} />, label: "Software Development", href: "/services/pro" },
-      { icon: <ShoppingCart size={18} />, label: "E-Commerce", href: "/services/e-com" },
-      { icon: <Bot size={18} />, label: "Arch AI", href: "/services/aura-ai" }
+      { icon: <Bot size={18} />, label: "Arch AI", href: "/services/aura-ai" },
+      { icon: <Server size={18} />, label: "Database", href: "/services/database" }
     ],
   },
   useCases: {
@@ -54,7 +55,7 @@ export function Navbar() {
   const isHome = location.pathname === "/";
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [navHidden, setNavHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -140,7 +141,7 @@ export function Navbar() {
     }
   };
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0, y: -10 },
     show: { 
       opacity: 1, 
@@ -159,9 +160,9 @@ export function Navbar() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 15 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
   const renderDropdown = (key: keyof typeof dropdownContent) => {
@@ -206,7 +207,7 @@ export function Navbar() {
                     className="dropdown-link"
                     onClick={() => handleNavClick(item.href || "#")}
                   >
-                    {item.icon && <span className="link-icon">{item.icon}</span>}
+                    {(item as any).icon && <span className="link-icon">{(item as any).icon}</span>}
                     <span className="dropdown-link-text">{item.label}</span>
                   </motion.button>
                 ))}
@@ -244,9 +245,9 @@ export function Navbar() {
           >
             <img
               src={BRAND_LOGO}
-              alt="arch computing logo"
+              alt="arch logo"
               className="object-contain"
-              style={{ height: "32px" }}
+              style={{ height: "30px" }}
             />
             <span style={{
               fontFamily: "'Google Sans Flex', 'Inter', sans-serif",
@@ -260,12 +261,12 @@ export function Navbar() {
                   background: "linear-gradient(90deg, #9CA3AF, #A1A1AA)", 
                   WebkitBackgroundClip: "text", 
                   WebkitTextFillColor: "transparent" 
-              }}>arch</span>
+              }}> </span>
               <span style={{ 
                   fontWeight: 500, 
                   color: "#0F172A",
                   marginLeft: "0.15em"
-              }}>computing</span>
+              }}> </span>
             </span>
           </button>
 
@@ -445,7 +446,7 @@ export function Navbar() {
                         >
                           <div className="flex items-center gap-3 w-full group-hover:bg-[#EFF2F7] rounded-lg px-3 py-2 transition-colors">
                             <span className="text-[#A1A1AA] transition-colors group-hover:text-[#9CA3AF] icon-glow-hover">{item.icon}</span>
-                            <span className="group-hover:text-[#000000] gradient-glow-hover">{item.label}</span>
+                            <span className="group-hover:text-[#333333] gradient-glow-hover">{item.label}</span>
                           </div>
                         </button>
                       ))}
@@ -488,7 +489,7 @@ export function Navbar() {
                           onClick={() => handleNavClick("#")}
                         >
                           <div className="flex items-center w-full group-hover:bg-[#EFF2F7] rounded-lg px-3 py-2 transition-colors">
-                            <span className="group-hover:text-[#000000] gradient-glow-hover">{item.label}</span>
+                            <span className="group-hover:text-[#333333] gradient-glow-hover">{item.label}</span>
                           </div>
                         </button>
                       ))}
@@ -542,7 +543,7 @@ export function Navbar() {
                           onClick={() => handleNavClick("#")}
                         >
                           <div className="flex items-center w-full group-hover:bg-[#EFF2F7] rounded-lg px-3 py-2 transition-colors">
-                            <span className="group-hover:text-[#000000] gradient-glow-hover">{item.label}</span>
+                            <span className="group-hover:text-[#333333] gradient-glow-hover">{item.label}</span>
                           </div>
                         </button>
                       ))}

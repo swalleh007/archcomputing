@@ -2,17 +2,18 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, AnimatePresence, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { Play } from "lucide-react";
 import { OrbitalDock } from "./video-showcase/OrbitalDock";
+// @ts-ignore - allow side-effect CSS import in TS
 import "./VideoShowcase.css";
 
 const SERVICES = [
   "Web Engineering",
   "AI Integration",
-  "Graphics Design",
-  "Branding",
+  "Design",
+  "Automation",
   "E-Commerce",
   "App Development",
-  "Unmatched Speed",
-  "Impeccable Skill",
+  "software Development",
+  "Database",
 ];
 
 const SERVICE_INTERVAL_MS = 2500;
@@ -169,8 +170,13 @@ export const VideoShowcase = () => {
 
   return (
     <section className="video-showcase-section" ref={sectionRef}>
+      {/* Decorative artboard blobs (Digitall-style accents) */}
+      <div className="bg-blob-left" aria-hidden="true" />
+      <div className="bg-blob-right" aria-hidden="true" />
       <div className="video-showcase-inner">
-        <motion.div
+        <div className="t396 t396__artboard" data-record-type="396" aria-hidden="true">
+          {/* artboard container to mirror Digitall structure */}
+          <motion.div
           ref={containerRef}
           className="video-player-outer"
           style={{ scale, willChange: "transform" }}
@@ -211,7 +217,7 @@ export const VideoShowcase = () => {
             </div>
 
             <div className="stage-branding">
-              <h2 className="stage-title">arch computing</h2>
+              <h2 className="stage-title">arch</h2>
               <p className="stage-subtitle">Cinematic Excellence in Motion</p>
             </div>
           </div>
@@ -219,14 +225,14 @@ export const VideoShowcase = () => {
           {!isPlayingVideo && (
             <div className="absolute bottom-8 right-8 z-40">
               <button
-                className="flex items-center justify-center w-16 h-16 bg-white/5 backdrop-blur-md rounded-full border border-white/10 text-black/70 hover:bg-white hover:text-black hover:scale-110 transition-all duration-300 group shadow-lg"
+                className="play-circle"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleContainerClick();
                 }}
                 aria-label="Play Intro Video"
               >
-                <Play size={24} fill="currentColor" className="ml-1" />
+                <Play size={28} fill="currentColor" />
               </button>
             </div>
           )}
@@ -248,9 +254,10 @@ export const VideoShowcase = () => {
           </AnimatePresence>
         </motion.div>
         
-        <div className="mt-16 w-full">
-          <OrbitalDock />
-        </div>
+          <div className="mt-16 w-full">
+            <OrbitalDock />
+          </div>
+        </div>{/* end .t396__artboard */}
       </div>
 
       {/* Video Modal Overlay */}
@@ -282,7 +289,7 @@ export const VideoShowcase = () => {
                 width="100%"
                 height="100%"
                 src={YOUTUBE_EMBED_URL}
-                title="arch computing Intro"
+                title="arch Intro"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="w-full h-full border-0"

@@ -48,7 +48,7 @@ const DockIcon = ({ Icon, label, index, isActive }: { Icon: LucideIcon, label: s
       animate={{ scale: isActive ? 1.15 : 1 }}
       className={`orbital-dock-icon-wrapper flex items-center justify-center p-4 rounded-full mx-3 border min-w-[84px] min-h-[84px] w-[84px] h-[84px] transition-colors duration-500 ${
         isActive 
-          ? "bg-gradient-primary text-black shadow-[0_12px_32px_rgba(156,39,176,0.5)] border-transparent" 
+          ? "bg-gradient-primary text-white shadow-[0_12px_32px_rgba(78,38,255,0.5)] border-transparent"
           : "bg-spectrum border-[#9C27B0]/20 text-[#9C27B0] shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_rgba(156,39,176,0.3)] hover:border-[#9C27B0]/40 hover:text-[#5A53C8]"
       }`}
     >

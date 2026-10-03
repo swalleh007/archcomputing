@@ -3,16 +3,16 @@ import { Link } from 'react-router';
 
 export const PrivacyPolicyContent = () => (
   <div className="space-y-6 text-[#E0E0E0] text-sm md:text-base leading-relaxed">
-    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-8">Updated by arch computing 24/09/2024</p>
+    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-8">Updated by arch 24/09/2024</p>
     
-    <p>If you are interested in becoming an <strong>arch computing</strong> partner, you can submit an application on this website.</p>
+    <p>If you are interested in becoming an <strong>arch</strong> partner, you can submit an application on this website.</p>
     <p>All personal data you provide to us is completely secure. From this document you will learn what personal data we collect, how we use and protect it.</p>
 
-    <h2 className="text-xl font-bold text-black mt-8 mb-4">What does arch computing use your data for?</h2>
+    <h2 className="text-xl font-bold text-black mt-8 mb-4">What does arch use your data for?</h2>
     <p>We need to pass your personal data to our sales managers for them to contact you. You can choose not to provide your personal data, but in this case we could not process your partnership request.</p>
     <p>We add your personal data to our customer management system. Once this is done, we will contact you about our potential partnership.</p>
 
-    <h2 className="text-xl font-bold text-black mt-8 mb-4">What data is collected by arch computing?</h2>
+    <h2 className="text-xl font-bold text-black mt-8 mb-4">What data is collected by arch?</h2>
     <p>We collect all the information you provide when booking on a travel supplier's website (or equivalent service inquiries):</p>
     <ul className="list-disc pl-5 space-y-2 my-4">
       <li>your name</li>
@@ -33,26 +33,26 @@ export const PrivacyPolicyContent = () => (
     <h2 className="text-xl font-bold text-black mt-8 mb-4">How do we share the personal data we collect?</h2>
     <p>We only send your personal data to our sales department. If requested, we may share your data with law enforcement.</p>
 
-    <h2 className="text-xl font-bold text-black mt-8 mb-4">How does arch computing store and protect your data?</h2>
-    <p>We use modern IT security tools and limit unauthorized access to our resources to protect your personal data. We are ISO-27001 certified, we use database encryption and we apply Secure Sockets Layer (SSL) encryption when transferring personal data. We monitor and promptly resolve security issues that may arise due to external factors. If necessary, we will inform you of potential problems and tell you how to avoid them. arch computing and some of our partners are located in countries with the status of countries that do not ensure an appropriate level of data protection in accordance with the GDPR. However, we do our best to protect your personal data.</p>
+    <h2 className="text-xl font-bold text-black mt-8 mb-4">How does arch store and protect your data?</h2>
+    <p>We use modern IT security tools and limit unauthorized access to our resources to protect your personal data. We are ISO-27001 certified, we use database encryption and we apply Secure Sockets Layer (SSL) encryption when transferring personal data. We monitor and promptly resolve security issues that may arise due to external factors. If necessary, we will inform you of potential problems and tell you how to avoid them. arch and some of our partners are located in countries with the status of countries that do not ensure an appropriate level of data protection in accordance with the GDPR. However, we do our best to protect your personal data.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">How can you manage your data?</h2>
-    <p>We understand that you may want to manage your personal data provided to us. In any case, you wish to manage your data, do not hesitate to contact us via <strong>info@archcomputing.com</strong></p>
+    <p>We understand that you may want to manage your personal data provided to us. In any case, you wish to manage your data, do not hesitate to contact us via <strong>info@arch.com</strong></p>
 
-    <h2 className="text-xl font-bold text-black mt-8 mb-4">How arch computing changes the privacy policy</h2>
+    <h2 className="text-xl font-bold text-black mt-8 mb-4">How arch changes the privacy policy</h2>
     <p>We reserve the right to make changes to the Privacy Policy and include the date of the last update. A new version of the document takes effect after its publication, unless otherwise specified.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">Contact Details</h2>
-    <p>arch computing is the Personal Data Processor as defined by the Federal Law on Personal Data No. 152-FZ of July 27, 2006 and the Personal Data Processor as defined by the GDPR of May 25, 2018.</p>
-    <p>arch computing processes personal data in accordance with this Privacy Policy.</p>
-    <p>If you have any suggestions or questions regarding our privacy policy, please email us at <strong className="policy-email-accent">info@archcomputing.com</strong></p>
+    <p>arch is the Personal Data Processor as defined by the Federal Law on Personal Data No. 152-FZ of July 27, 2006 and the Personal Data Processor as defined by the GDPR of May 25, 2018.</p>
+    <p>arch processes personal data in accordance with this Privacy Policy.</p>
+    <p>If you have any suggestions or questions regarding our privacy policy, please email us at <strong className="policy-email-accent">info@arch.com</strong></p>
     <p>Or just go to our <Link to="/contact" className="policy-link-accent">contacts page</Link>.</p>
   </div>
 );
 
 export const CookiePolicyContent = () => (
   <div className="space-y-6 text-[#E0E0E0] text-sm md:text-base leading-relaxed">
-    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-8">Updated by arch computing Legal 24/09/2024</p>
+    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-8">Updated by arch Legal 24/09/2024</p>
     
     <h2 className="text-xl font-bold text-black mt-8 mb-4">What are cookies</h2>
     <p>Cookies are small text files that are sent to your computer when you are on a website. They help us determine which pages of the website are effective and which need improvement.</p>
@@ -95,7 +95,7 @@ export const CookiePolicyContent = () => (
     <p>Ad networks and media agencies act as intermediaries for websites and advertisers. The marketing cookies of these parties enable:</p>
     <ul className="list-disc pl-5 space-y-2 my-4">
       <li>We may show you third-party advertisements</li>
-      <li>Our advertising partners may combine your preferences on arch computing with information they collect when you visit other websites</li>
+      <li>Our advertising partners may combine your preferences on arch with information they collect when you visit other websites</li>
     </ul>
     <p>For the cookies that these parties place for marketing purposes, we refer to the statements on the websites of these parties.</p>
 
@@ -118,12 +118,12 @@ export const CookiePolicyContent = () => (
     <p>You also have the option of deleting cookies that are stored on your computer. Just follow the browser instructions. Again, deleting cookies can have a negative impact on the performance of many websites.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">Policy Updates and Comments</h2>
-    <p>This is a brief description of how we use cookies today. If we change our use of cookies, we may also change this cookie policy. The "Last Revised Date" statement at the top of this page indicates when it was last modified. If you have any questions or suggestions regarding this policy, please let us know by contacting: <strong className="policy-email-accent">info@archcomputing.com</strong></p>
+    <p>This is a brief description of how we use cookies today. If we change our use of cookies, we may also change this cookie policy. The "Last Revised Date" statement at the top of this page indicates when it was last modified. If you have any questions or suggestions regarding this policy, please let us know by contacting: <strong className="policy-email-accent">info@arch.com</strong></p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">Contact Details</h2>
-    <p>arch computing is the Personal Data Processor as defined by the Federal Law on Personal Data No. 152-FZ of July 27, 2006 and the Personal Data Processor as defined by the GDPR of May 25, 2018</p>
-    <p>arch computing processes personal data in accordance with this Privacy Policy</p>
-    <p>If you have any suggestions or questions regarding our privacy policy, please email us at <strong className="policy-email-accent">info@archcomputing.com</strong></p>
+    <p>arch is the Personal Data Processor as defined by the Federal Law on Personal Data No. 152-FZ of July 27, 2006 and the Personal Data Processor as defined by the GDPR of May 25, 2018</p>
+    <p>arch processes personal data in accordance with this Privacy Policy</p>
+    <p>If you have any suggestions or questions regarding our privacy policy, please email us at <strong className="policy-email-accent">info@arch.com</strong></p>
     <p>Or simply go to our <Link to="/contact" className="policy-link-accent">contacts page</Link>.</p>
   </div>
 );
@@ -132,22 +132,22 @@ export const TermsContent = () => (
   <div className="space-y-6 text-[#E0E0E0] text-sm md:text-base leading-relaxed">
     <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-8">Last Updated: June 2026</p>
     
-    <p>Please read these Terms and Conditions carefully before using the arch computing website.</p>
+    <p>Please read these Terms and Conditions carefully before using the arch website.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">1. Acceptance of Terms</h2>
     <p>By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">2. Intellectual Property</h2>
-    <p>The Service and its original content, features and functionality are and will remain the exclusive property of arch computing and its licensors. Our brand names, trademarks, and trade dress may not be used in connection with any product or service without the prior written consent of arch computing.</p>
+    <p>The Service and its original content, features and functionality are and will remain the exclusive property of arch and its licensors. Our brand names, trademarks, and trade dress may not be used in connection with any product or service without the prior written consent of arch.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">3. Links To Other Web Sites</h2>
-    <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by arch computing. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third party web sites or services.</p>
+    <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by arch. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third party web sites or services.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">4. Termination</h2>
     <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
 
     <h2 className="text-xl font-bold text-black mt-8 mb-4">5. Governing Law</h2>
-    <p>These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which arch computing operates, without regard to its conflict of law provisions.</p>
+    <p>These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which arch operates, without regard to its conflict of law provisions.</p>
   </div>
 );
 

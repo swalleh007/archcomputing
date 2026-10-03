@@ -9,9 +9,7 @@ export function AbstractArtwork({ className = "" }: { className?: string }) {
     
     // Choose between the brand colors
     const colors = [
-      "linear-gradient(135deg, #F7A521 0%, #E91E63 100%)",
-      "linear-gradient(135deg, #E91E63 0%, #5A53C8 100%)",
-      "linear-gradient(135deg, #5A53C8 0%, #F7A521 100%)"
+      "linear-gradient(135deg, #E91E63 0%, #2e20e6 100%)"
     ];
     const color = colors[i % colors.length];
 

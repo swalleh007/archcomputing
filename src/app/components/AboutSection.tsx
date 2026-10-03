@@ -59,8 +59,8 @@ export function AboutSection() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-                alt="arch computing team collaboration"
+                src="/images/team_artifact_1782480085547.png"
+                alt="arch team collaboration"
                 className="w-full aspect-[4/5] object-cover"
                 loading="lazy"
               />
@@ -91,7 +91,7 @@ export function AboutSection() {
               Born in Uganda.<br />Built for the World.
             </h2>
 
-            <p
+              <p
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "20px", fontWeight: 400,
@@ -101,8 +101,8 @@ export function AboutSection() {
                 textAlign: "left",
                 maxWidth: "600px"
               }}
-            >
-              arch computing is a full-service digital agency headquartered in Mukono, Uganda. We engineer websites, brand identities, e-commerce systems, and AI-powered products for clients across 24+ markets. Our work is built on precision, speed, and a relentless commitment to outcomes — not aesthetics alone.
+              >
+              arch is a full-service digital agency headquartered in Mukono, Uganda. We engineer websites, brand identities, e-commerce systems, and AI-powered products for clients across 24+ markets. Our work is built on precision, speed, and a relentless commitment to outcomes — not aesthetics alone.
             </p>
 
             {/* Stat pills */}
@@ -146,7 +146,7 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <span className="group-hover:underline">Become a client</span>
+              <span className="group-hover:underline">Request Consultation</span>
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
             </motion.button>
           </motion.div>

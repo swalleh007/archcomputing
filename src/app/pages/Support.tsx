@@ -32,10 +32,19 @@ export const Support = () => {
   }, []);
 
   useEffect(() => {
-    if (showCanvas && canvasRef.current && !engine) {
+    if (!showCanvas || !canvasRef.current || engine) return;
+
+    try {
       const newEngine = new SupportParticleEngine(canvasRef.current);
       setEngine(newEngine);
+    } catch (error) {
+      console.warn('WebGL support background unavailable; switching to static layout.', error);
+      setShowCanvas(false);
+      if (canvasRef.current) {
+        canvasRef.current.style.display = 'none';
+      }
     }
+
     return () => {
       if (engine) {
         engine.destroy();

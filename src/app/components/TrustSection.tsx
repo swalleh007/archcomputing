@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { DottedBg } from "./shared/DottedBg";
 
 const logos = [
-  "NEXTGEN", "AURORA", "LUMINARY", "ELEVATE", "NEXUS", "VERTEX"
+  "NEXTGEN", "Sk Bakery", "LUMINARY", "ELEVATE"
 ];
 
 export function TrustSection() {
@@ -32,10 +32,8 @@ export function TrustSection() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 mt-24 pt-16 border-t border-slate-100 w-full">
             {[
-              { label: "Projects Delivered", value: "150+" },
-              { label: "Global Reach", value: "24+" },
-              { label: "Awards Won", value: "12" },
-              { label: "Client Retention", value: "99%" }
+              { label: "Projects Delivered", value: "15+" },
+              { label: "Client Retention", value: "97%" }
             ].map((stat, i) => (
               <motion.div 
                 key={i}

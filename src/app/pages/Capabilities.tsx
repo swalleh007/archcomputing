@@ -11,11 +11,19 @@ export function Capabilities() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-        if (canvasRef.current && !engine) {
-          const newEngine = new SupportParticleEngine(canvasRef.current);
-          setEngine(newEngine);
+      if (!canvasRef.current || engine) return;
+
+      try {
+        const newEngine = new SupportParticleEngine(canvasRef.current);
+        setEngine(newEngine);
+      } catch (error) {
+        console.warn('WebGL particle background unavailable on this device; continuing without it.', error);
+        if (canvasRef.current) {
+          canvasRef.current.style.display = 'none';
         }
+      }
     }, 100);
+
     return () => {
       clearTimeout(timer);
       if (engine) engine.destroy();

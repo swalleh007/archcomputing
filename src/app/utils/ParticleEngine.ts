@@ -300,12 +300,20 @@ export class ParticleEngine {
     private isDestroyed = false;
 
     constructor(private canvas: HTMLCanvasElement) {
+        const canvasContext = this.canvas.getContext('webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' })
+            ?? this.canvas.getContext('experimental-webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' });
+
+        if (!canvasContext) {
+            throw new Error('WebGL context unavailable');
+        }
+
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
             antialias: true,
             alpha: true,
             powerPreference: 'high-performance',
             preserveDrawingBuffer: false,
+            context: canvasContext,
         });
 
         // Strict PixelRatio management: cap at 2 for optimal sharpness on Retina displays

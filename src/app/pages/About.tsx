@@ -119,7 +119,7 @@ export function About() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="bg-[#F5F5F7] rounded-[32px] p-8 flex flex-col justify-center min-h-[180px] xl:min-h-[220px]"
               >
-                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">+15</h3>
+                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">4+</h3>
                 <p className="text-[#757575] font-['Inter'] text-lg font-medium">Years of experience</p>
               </motion.div>
 
@@ -129,7 +129,7 @@ export function About() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-[#F5F5F7] rounded-[32px] p-8 flex flex-col justify-center min-h-[180px] xl:min-h-[220px]"
               >
-                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">+25</h3>
+                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">11+</h3>
                 <p className="text-[#757575] font-['Inter'] text-lg font-medium">Partners</p>
               </motion.div>
 
@@ -139,7 +139,7 @@ export function About() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-[#F5F5F7] rounded-[32px] p-8 flex flex-col justify-center min-h-[180px] xl:min-h-[220px]"
               >
-                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">+500</h3>
+                <h3 className="text-6xl md:text-7xl font-bold mb-2 tracking-tighter text-[#111]">+50</h3>
                 <p className="text-[#757575] font-['Inter'] text-lg font-medium leading-snug max-w-[200px]">Projects we have successfully completed</p>
               </motion.div>
 
@@ -151,11 +151,10 @@ export function About() {
                 className="bg-transparent min-h-[180px] xl:min-h-[220px] h-full grid grid-cols-3 grid-rows-2 gap-2"
               >
                 {[
-                  { name: 'design', path: '/services/design', bg: 'url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop)', span: 1 },
+                  { name: 'design', path: '/services/design', bg: 'url(/images/team_artifact_1782480085547.png)', span: 1 },
                   { name: 'web', path: '/services/web', bg: 'url(/images/web_bg.png)', span: 1 },
-                  { name: 'e-com', path: '/services/e-com', bg: 'url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2574&auto=format&fit=crop)', span: 1 },
                   { name: 'pro', path: '/services/pro', bg: 'url(/images/pro_bg.png)', span: 2 },
-                  { name: 'aura ai', path: '/services/aura-ai', bg: 'url(https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop)', span: 1 }
+                  { name: 'aura ai', path: '/services/aura-ai', bg: 'url(/images/aura_ai_chat.png)', span: 1 }
                 ].map((service) => (
                   <div 
                     key={service.name} 
@@ -185,10 +184,10 @@ export function About() {
 
               <button 
                 onClick={() => navigate("/capabilities")}
-                className="pointer-events-auto flex items-center justify-center gap-3 bg-gradient-primary text-black px-8 py-3 rounded-full font-bold text-[16px] transition-all duration-300 hover:shadow-[0_0_30px_rgba(247,165,33,0.6)] active:scale-95 border-none group mt-8"
+                className="pointer-events-auto flex items-center justify-center gap-3 bg-gradient-primary text-white px-8 py-3 rounded-full font-bold text-[16px] transition-all duration-300 hover:shadow-[0_0_30px_rgba(78,38,255,0.6)] active:scale-95 border-none group mt-8"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Just look at our cases <ArrowRight className="transition-transform group-hover:translate-x-1" size={20} strokeWidth={2.5} />
+                Proven solutions <ArrowRight className="transition-transform group-hover:translate-x-1" size={20} strokeWidth={2.5} />
               </button>
             </div>
           </div>
@@ -208,7 +207,7 @@ export function About() {
           >
             {/* Background image / map */}
             <img 
-              src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2000&auto=format&fit=crop" 
+              src="/images/uc_education_1_1782481941967.png" 
               alt="Kampala, Uganda"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
@@ -298,8 +297,8 @@ export function About() {
           >
             {/* Team image */}
             <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop" 
-              alt="arch computing team"
+              src="/images/team_artifact_1782480085547.png" 
+              alt="arch team"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             {/* Dark gradient overlay */}
@@ -307,10 +306,9 @@ export function About() {
             
             {/* Logo Top Left */}
             <div className="absolute top-8 left-8 md:top-12 md:left-16 flex items-center gap-2 z-10 pointer-events-none">
-              <img src={BRAND_LOGO} alt="arch computing logo" className="object-contain h-[32px] md:h-[40px]" />
+              <img src={BRAND_LOGO} alt="arch logo" className="object-contain h-[32px] md:h-[40px]" />
               <span style={{ fontFamily: "'Google Sans Flex', 'Inter', sans-serif", fontSize: "24px", letterSpacing: "-0.02em", display: "flex", alignItems: "center" }}>
                 <span style={{ fontWeight: 800, background: "linear-gradient(90deg, #9CA3AF, #A1A1AA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>arch</span>
-                <span style={{ fontWeight: 500, color: "#FFFFFF", marginLeft: "0.15em" }}>computing</span>
               </span>
             </div>
 
@@ -345,7 +343,7 @@ export function About() {
                 
                 <button 
                   onClick={() => navigate("?contact=true")}
-                  className="pointer-events-auto flex items-center justify-center gap-3 bg-gradient-primary text-black px-8 py-3 rounded-full font-bold text-base transition-all duration-300 hover:shadow-[0_0_30px_rgba(247,165,33,0.6)] active:scale-95 border-none group"
+                  className="pointer-events-auto flex items-center justify-center gap-3 bg-gradient-primary text-white px-8 py-3 rounded-full font-bold text-base transition-all duration-300 hover:shadow-[0_0_30px_rgba(78,38,255,0.6)] active:scale-95 border-none group"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Join our team <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} strokeWidth={2.5} />

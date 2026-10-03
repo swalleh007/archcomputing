@@ -3,30 +3,15 @@ import {
   Activity, 
   Anchor, 
   Hexagon, 
-  Hotel, 
-  Droplets, 
-  ShieldCheck, 
-  Sparkles, 
-  Bike, 
-  BadgeCheck, 
-  MapPin, 
-  Waves, 
-  Coffee 
+  
+ 
 } from "lucide-react";
 
 const CLIENTS = [
   { name: "Pharmalink", Icon: Activity, colorClass: "group-hover:text-blue-500" },
   { name: "TABOO OF THE SEAS", Icon: Anchor, uppercase: true, colorClass: "group-hover:text-red-500" },
-  { name: "Pharmalys", Icon: Hexagon, colorClass: "group-hover:text-emerald-500" },
-  { name: "HOTELLINE", Icon: Hotel, uppercase: true, colorClass: "group-hover:text-indigo-500" },
-  { name: "safi", Icon: Droplets, lowercase: true, colorClass: "group-hover:text-cyan-500" },
-  { name: "swisslac", Icon: ShieldCheck, lowercase: true, colorClass: "group-hover:text-sky-500" },
-  { name: "DERMOLYS", Icon: Sparkles, uppercase: true, colorClass: "group-hover:text-pink-500" },
-  { name: "MOTO TOUAREG", Icon: Bike, uppercase: true, colorClass: "group-hover:text-orange-500" },
-  { name: "PrimaSure Total", Icon: BadgeCheck, colorClass: "group-hover:text-teal-500" },
-  { name: "MYAGENT RENT", Icon: MapPin, uppercase: true, colorClass: "group-hover:text-rose-500" },
-  { name: "Safi H2O", Icon: Waves, colorClass: "group-hover:text-cyan-400" },
-  { name: "Safi Milk", Icon: Coffee, colorClass: "group-hover:text-amber-600" },
+  { name: "Pharmalys", Icon: Hexagon, colorClass: "group-hover:text-emerald-500" }
+
 ];
 
 interface ClientLogosProps {

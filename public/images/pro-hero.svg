@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#001f7a" stop-opacity="1" />
+      <stop offset="50%" stop-color="#0055ff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00aaff" stop-opacity="0.85" />
+    </linearGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch" result="t" />
+      <feColorMatrix in="t" type="saturate" values="0" result="s" />
+      <feBlend in="SourceGraphic" in2="s" mode="overlay" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+  <g opacity="0.18" filter="url(#noise)">
+    <circle cx="400" cy="200" r="360" fill="#ffffff" />
+    <circle cx="1200" cy="700" r="300" fill="#dfff00" />
+  </g>
+  <g fill="white" opacity="0.06" transform="translate(0,0)">
+    <path d="M0 900 L1600 0 L1600 900 Z" />
+  </g>
+</svg>

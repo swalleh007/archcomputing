@@ -12,7 +12,7 @@ export function CaseStudies() {
             transition={{ duration: 0.8 }}
             className="text-[64px] md:text-[90px] lg:text-[100px] leading-[0.9] font-medium tracking-tight"
           >
-            real
+            proven
             <span 
               className="font-bold block lg:inline lg:ml-6"
               style={{
@@ -21,7 +21,7 @@ export function CaseStudies() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              results.
+              solutions
             </span>
           </motion.h1>
 

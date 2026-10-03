@@ -234,9 +234,7 @@ export function TargetAudienceSection() {
 
       // Create the logo's linear gradient spanning the entire width of the canvas
       const gradient = ctx.createLinearGradient(0, 0, width, 0);
-      gradient.addColorStop(0, "#5A53C8"); // Indigo
-      gradient.addColorStop(0.5, "#9C27B0"); // Purple
-      gradient.addColorStop(1, "#F7A521"); // Orange
+      gradient.addColorStop(0, "#3528eb"); // Indigo
       ctx.fillStyle = gradient;
 
       for (let i = 0; i < particles.length; i++) {

@@ -29,11 +29,11 @@ const TASKS = [
 
 function InputEl({ label, ...props }: React.InputHTMLAttributes<HTMLInputElement> & { label?: string }) {
   return (
-    <div className="flex flex-col bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.1)] rounded-[16px] px-4 py-2 transition-all duration-300 focus-within:border-white focus-within:bg-[rgba(255,255,255,0.05)] w-full">
-      {label && <span className="text-[10px] text-gray-500 font-['Inter'] mb-1 tracking-wide">{label}</span>}
+    <div className="flex flex-col bg-gray-50 border border-gray-200 rounded-[16px] px-4 py-2 transition-all duration-300 focus-within:border-black/70 focus-within:bg-white w-full">
+      {label && <span className="text-[10px] text-gray-600 font-['Inter'] mb-1 tracking-wide">{label}</span>}
       <input 
         {...props}
-        className="bg-transparent border-none outline-none text-black font-['Inter'] text-[15px] placeholder-black/80 w-full"
+        className="bg-transparent border-none outline-none text-black font-['Inter'] text-[15px] placeholder-gray-400 w-full"
       />
     </div>
   );
@@ -41,11 +41,11 @@ function InputEl({ label, ...props }: React.InputHTMLAttributes<HTMLInputElement
 
 function TextareaEl({ label, ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement> & { label?: string }) {
   return (
-    <div className="flex flex-col bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.1)] rounded-[16px] px-4 py-2 transition-all duration-300 focus-within:border-white focus-within:bg-[rgba(255,255,255,0.05)] w-full h-full">
-      {label && <span className="text-[10px] text-gray-500 font-['Inter'] mb-1 tracking-wide">{label}</span>}
+    <div className="flex flex-col bg-gray-50 border border-gray-200 rounded-[16px] px-4 py-2 transition-all duration-300 focus-within:border-black/70 focus-within:bg-white w-full h-full">
+      {label && <span className="text-[10px] text-gray-600 font-['Inter'] mb-1 tracking-wide">{label}</span>}
       <textarea 
         {...props}
-        className="bg-transparent border-none outline-none text-black font-['Inter'] text-[15px] placeholder-black/80 w-full h-full resize-none custom-scrollbar"
+        className="bg-transparent border-none outline-none text-black font-['Inter'] text-[15px] placeholder-gray-400 w-full h-full resize-none custom-scrollbar"
       />
     </div>
   );
@@ -54,10 +54,10 @@ function TextareaEl({ label, ...props }: React.TextareaHTMLAttributes<HTMLTextAr
 function CheckboxEl({ label, checked, onChange }: { label: string; checked: boolean; onChange: () => void }) {
   return (
     <div className="flex items-center gap-3 cursor-pointer w-fit group" onClick={onChange}>
-      <div className={`w-[22px] h-[22px] rounded-[6px] border flex flex-shrink-0 items-center justify-center transition-all ${checked ? 'border-transparent bg-gradient-primary' : 'border-[rgba(255,255,255,0.3)] group-hover:border-white'}`}>
+      <div className={`w-[22px] h-[22px] rounded-[6px] border flex flex-shrink-0 items-center justify-center transition-all ${checked ? 'border-transparent bg-gradient-primary' : 'border-gray-300 group-hover:border-black/70'}`}>
         {checked && <Check size={14} color="black" strokeWidth={3} />}
       </div>
-      <span className={`text-[15px] font-['Inter'] transition-colors select-none ${checked ? 'text-black' : 'text-gray-400 group-hover:text-black'}`}>{label}</span>
+      <span className={`text-[15px] font-['Inter'] transition-colors select-none ${checked ? 'text-black' : 'text-gray-600 group-hover:text-black'}`}>{label}</span>
     </div>
   );
 }
@@ -105,12 +105,12 @@ function CustomPhoneInput({ value, onChange }: { value: string | undefined, onCh
   return (
     <div className="relative w-full" ref={dropdownRef}>
       <div 
-        className="flex items-center w-full focus-within:border-white focus-within:bg-[rgba(255,255,255,0.05)] transition-all duration-300 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.1)] rounded-[16px]"
+        className="flex items-center w-full focus-within:border-black/70 focus-within:bg-white transition-all duration-300 bg-gray-50 border border-gray-200 rounded-[16px]"
       >
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-4 py-3 border-r border-white/20 hover:bg-white/5 transition-colors"
+          className="flex items-center gap-2 px-4 py-3 border-r border-gray-200 hover:bg-gray-50 transition-colors"
         >
           <span className="text-xl leading-none">{selectedCountry.flag}</span>
           <ChevronDown size={14} className="text-black/50" />
@@ -121,7 +121,7 @@ function CustomPhoneInput({ value, onChange }: { value: string | undefined, onCh
           placeholder="00-000-0000"
           value={phoneNumber}
           onChange={handlePhoneChange}
-          className="flex-1 bg-transparent border-none text-black outline-none px-4 py-3 placeholder-gray-500 font-['Inter'] text-[15px]"
+          className="flex-1 bg-transparent border-none text-black outline-none px-4 py-3 placeholder-gray-400 font-['Inter'] text-[15px]"
         />
       </div>
 
@@ -141,7 +141,7 @@ function CustomPhoneInput({ value, onChange }: { value: string | undefined, onCh
                   onClick={() => handleCountrySelect(c)}
                   className="flex items-center justify-between px-5 py-2.5 hover:bg-gray-100 transition-colors text-left"
                 >
-                  <span className="text-[#111111] font-['Inter'] text-sm font-medium">{c.name}</span>
+                  <span className="text-black font-['Inter'] text-sm font-medium">{c.name}</span>
                   <div className="flex items-center gap-3">
                     <span className="text-gray-500 font-['Inter'] text-sm w-10 text-right">{c.dialCode}</span>
                     <span className="text-lg leading-none">{c.flag}</span>
@@ -204,7 +204,7 @@ export function ContactSection({ onClose }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[9999] overflow-y-auto flex justify-center items-start md:items-center p-4 md:p-8 bg-black/40 backdrop-blur-lg"
+      className="fixed inset-0 z-[9999] overflow-y-auto flex justify-center items-start md:items-center p-4 md:p-8 bg-white/60 backdrop-blur-sm text-black"
     >
       <div className="min-h-full w-full flex items-center justify-center py-8">
         <motion.div 
@@ -212,7 +212,7 @@ export function ContactSection({ onClose }: Props) {
         animate={{ y: 0, opacity: 1, scale: 1 }}
         exit={{ y: 20, opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="w-full max-w-[1100px] bg-[#07070A] border border-white/10 rounded-[24px] md:rounded-[32px] overflow-hidden relative shadow-2xl flex flex-col"
+        className="w-full max-w-[1100px] bg-white border border-gray-200 rounded-[24px] md:rounded-[32px] overflow-hidden relative shadow-2xl flex flex-col text-black"
         style={{ minHeight: "60vh", maxHeight: "90vh" }}
       >
         {/* Abstract subtle background glow to match digitall but with our colors */}
@@ -240,7 +240,7 @@ export function ContactSection({ onClose }: Props) {
               </h2>
 
               {/* Progress Bar */}
-              <div className="w-[120px] h-[12px] bg-[rgba(255,255,255,0.1)] rounded-full overflow-hidden mt-2">
+              <div className="w-[120px] h-[12px] bg-gray-100 rounded-full overflow-hidden mt-2">
                 <motion.div 
                   className="h-full bg-gradient-primary shadow-[0_0_15px_rgba(247,165,33,0.5)]"
                   initial={{ width: "25%" }}
@@ -256,7 +256,7 @@ export function ContactSection({ onClose }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="mt-4 bg-[rgba(255,255,255,0.04)] border border-white/5 rounded-[24px] p-5 w-full"
+                    className="mt-4 bg-gray-50 border border-gray-100 rounded-[24px] p-5 w-full"
                   >
                     <h3 className="text-black font-bold font-['Inter'] text-lg mb-4">Services</h3>
                     <div className="grid grid-cols-2 gap-y-4 gap-x-2">
@@ -295,7 +295,7 @@ export function ContactSection({ onClose }: Props) {
                     className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full"
                   >
                     <div className="flex flex-col gap-4">
-                      <InputEl label="company name*" placeholder="archcomputing.com" required />
+                      <InputEl label="company name*" placeholder="arch.com" required />
                       <InputEl label="company website" placeholder="" />
                       <InputEl label="links to social networks" placeholder="" />
                     </div>
@@ -318,7 +318,7 @@ export function ContactSection({ onClose }: Props) {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                   >
-                    <div className="bg-[rgba(255,255,255,0.04)] border border-white/5 rounded-[24px] p-5 w-full h-full flex flex-col overflow-hidden">
+                    <div className="bg-gray-50 border border-gray-100 rounded-[24px] p-5 w-full h-full flex flex-col overflow-hidden">
                       <h3 className="text-black font-bold font-['Inter'] text-lg mb-4">Tasks</h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-4 overflow-y-auto custom-scrollbar flex-1 pr-2">
                         {TASKS.map(t => (
@@ -390,17 +390,17 @@ export function ContactSection({ onClose }: Props) {
                 {/* SUCCESS STATE */}
                 {success && (
                   <motion.div 
-                    key="success"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="absolute inset-0 flex flex-col items-center justify-center bg-[#07070A] z-50 rounded-3xl"
-                  >
-                    <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(247,165,33,0.5)]">
-                      <Check size={48} strokeWidth={3} color="white" />
-                    </div>
-                    <h3 className="text-4xl font-bold font-['Inter'] text-black mb-4">Request Received!</h3>
-                    <p className="text-gray-400 text-lg">We'll review your details and get back to you soon.</p>
-                  </motion.div>
+                      key="success"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="absolute inset-0 flex flex-col items-center justify-center bg-white z-50 rounded-3xl"
+                    >
+                      <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(247,165,33,0.5)]">
+                        <Check size={48} strokeWidth={3} color="white" />
+                      </div>
+                      <h3 className="text-4xl font-bold font-['Inter'] text-black mb-4">Request Received!</h3>
+                      <p className="text-gray-600 text-lg">We'll review your details and get back to you soon.</p>
+                    </motion.div>
                 )}
 
               </AnimatePresence>
@@ -420,17 +420,22 @@ export function ContactSection({ onClose }: Props) {
                 </button>
               )}
               
-              <button 
-                type="submit"
-                disabled={sending}
-                className="px-8 py-[16px] min-w-[200px] md:w-[320px] rounded-full bg-gradient-primary text-black font-['Inter'] font-bold text-[17px] flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(247,165,33,0.6)] transition-all active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {sending ? (
-                  <Loader2 className="animate-spin" size={20} />
-                ) : (
-                  <>{step === 4 ? "send" : "next"} →</>
-                )}
-              </button>
+              <div className="flex flex-col items-end gap-3">
+                <div className="text-xs text-black/60">
+                  By submitting you agree to our <a href="/privacy" className="underline text-[#111]">Privacy Policy</a> and <a href="/terms" className="underline text-[#111]">Terms</a>.
+                </div>
+                <button 
+                  type="submit"
+                  disabled={sending}
+                  className="px-8 py-[16px] min-w-[200px] md:w-[320px] rounded-full bg-gradient-primary text-white font-['Inter'] font-bold text-[17px] flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(78,38,255,0.6)] transition-all active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {sending ? (
+                    <Loader2 className="animate-spin" size={20} />
+                  ) : (
+                    <>{step === 4 ? "send" : "next"} →</>
+                  )}
+                </button>
+              </div>
             </div>
           )}
         </form>

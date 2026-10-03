@@ -39,13 +39,13 @@ export function StatsSection() {
           >
             <div className="text-6xl text-gray-200 font-serif leading-none mb-4">"</div>
             <p className="text-2xl md:text-[32px] leading-[1.3] font-['Space_Grotesk'] tracking-tight text-[#111111] mb-12">
-              arch computing didn't just rebuild our platform; they fundamentally changed how we operate. Their engineering rigor is unmatched in the agency space.
+              arch didn't just rebuild our platform; they fundamentally changed how we operate. Their engineering rigor is unmatched in the agency space.
             </p>
             
             <div className="flex items-center gap-6">
               <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=256&auto=format&fit=crop" 
+                  src="/images/team_artifact_1782480085547.png" 
                   alt="Client Portrait" 
                   className="w-full h-full object-cover"
                 />

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { ArrowRight, ArrowUpRight, Code, Layout, Globe, Server, Layers, Cpu, Smartphone, ShoppingCart, Share2 } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════
-// arch computing: cyber-luxury web engineering
+// arch: cyber-luxury web engineering
 // ═══════════════════════════════════════════════════════════════════════
 
 const SERVICES = [
@@ -30,7 +30,7 @@ const SERVICES = [
     icon: Layers
   },
     {
-    title: "ecommerce solutions",
+    title: "ecommerce platforms",
     desc: "We develop different eCom solutions depending on the goals and business needs from simple online stores with a fast launch to the enterprise level which help brands succeed online.",
     tags: ["online stores", "professional native solution", "standard professional solution", "native enterprise solution"],
     glow: "group-hover:shadow-[0_0_40px_rgba(0,255,102,0.15)]",
@@ -80,22 +80,22 @@ const CASES = [
   {
     title: "CMMZE",
     date: "07.24",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/pro_bg.png"
   },
   {
     title: "Zero E",
     date: "07.24",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/web_bg.png"
   },
   {
     title: "Revo Analytics",
     date: "06.24",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/bakery_landing.png"
   },
   {
     title: "Lamar Enterprise",
     date: "05.24",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/team_artifact_1782480085547.png"
   }
 ];
 
@@ -145,7 +145,7 @@ export function Web() {
               </div>
               
               <h1 className="text-[clamp(60px,8vw,140px)] font-bold leading-[0.85] tracking-[-0.04em] mb-8">
-                digital web <br />
+                web Engineering <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#dfff00] to-[#00ff66]">{"{ smart approach }"}</span>
               </h1>
             </div>
@@ -154,7 +154,7 @@ export function Web() {
               <p className="text-black/60 text-lg leading-relaxed font-light mb-4">
                 Develop websites with an eye on SEO-optimization and extreme performance. We have over six years' experience creating user focused and highly effective websites using agile principles.
               </p>
-              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-8 py-4 rounded-full font-bold text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300 group">
+              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-white px-8 py-4 rounded-full font-bold text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300 group">
                 Discuss Architecture 
                 <span className="bg-white/20 backdrop-blur-md text-black w-6 h-6 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -177,7 +177,7 @@ export function Web() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10 pointer-events-none" />
               <img 
-                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=85&auto=format&fit=crop" 
+                src="/images/web_bg.png" 
                 alt="Web Engineering Dashboard" 
                 className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[21/9] mix-blend-luminosity opacity-80"
               />
@@ -249,7 +249,7 @@ export function Web() {
                 depend on
               </h2>
               
-              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-8 py-4 rounded-full font-bold text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-12 w-max">
+              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-white px-8 py-4 rounded-full font-bold text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-12 w-max">
                 Become a client <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

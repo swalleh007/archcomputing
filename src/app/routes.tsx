@@ -13,7 +13,7 @@ import { AuraAI } from "./pages/services/AuraAI";
 import { Design } from "./pages/services/Design";
 import { Web } from "./pages/services/Web";
 import { Pro } from "./pages/services/Pro";
-import { Ecom } from "./pages/services/Ecom";
+import { Database } from "./pages/services/Database";
 import { Support } from "./pages/Support";
 
 export const router = createBrowserRouter([
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
       { path: "services/design", Component: Design },
       { path: "services/web", Component: Web },
       { path: "services/pro", Component: Pro },
-      { path: "services/e-com", Component: Ecom },
+      { path: "services/database", Component: Database },
       { path: "support", Component: Support },
     ],
   },

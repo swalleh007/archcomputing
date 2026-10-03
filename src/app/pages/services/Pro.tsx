@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { ArrowRight, ArrowUpRight, PenTool, Layout, Target, Map, Megaphone, BarChart } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════
-// arch computing: software development
+// arch: software development
 // ═══════════════════════════════════════════════════════════════════════
 
 const MARKETING_NEEDS = [
@@ -92,30 +92,30 @@ export function Pro() {
         {/* ═══════════════════════════════════════════════════════════════════════ */}
         {/* HERO SECTION */}
         {/* ═══════════════════════════════════════════════════════════════════════ */}
-        <section className="pt-[200px] pb-[100px] px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10">
+        <section className="pt-[120px] pb-[72px] px-4 sm:px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 md:pt-[200px] md:pb-[100px]">
           <m.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-16 mb-24"
+            className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 md:gap-16 mb-12 md:mb-24"
           >
-            <div className="flex-1">
-              <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 w-full">
+              <div className="flex items-center gap-4 mb-6 md:mb-8">
                 <span className="w-2 h-2 bg-[#0055ff] rounded-full animate-pulse shadow-[0_0_10px_#0055ff]" />
-                <span className="font-mono text-xs text-black/50 uppercase tracking-[0.2em]">01 – Capabilities - Software Development</span>
+                <span className="font-mono text-[10px] md:text-xs text-black/50 uppercase tracking-[0.2em]">01 – Capabilities - Software Development</span>
               </div>
               
-              <h1 className="text-[clamp(60px,8vw,140px)] font-bold leading-[0.85] tracking-[-0.04em] mb-8">
+              <h1 className="text-[44px] sm:text-[52px] md:text-[clamp(60px,8vw,140px)] font-bold leading-[0.88] tracking-[-0.04em] mb-5 md:mb-8">
                 software <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0055ff] to-[#00aaff]">development</span>
               </h1>
             </div>
 
-            <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end gap-6 text-left lg:text-right">
-              <p className="text-black/60 text-lg leading-relaxed font-light mb-4">
+            <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end gap-4 md:gap-6 text-left lg:text-right">
+              <p className="text-black/60 text-base md:text-lg leading-relaxed font-light mb-0 md:mb-4">
                 Combining strategy, creativity, technical ability and years of knowledge we help clients create and manage integrated digital channels that engage customers. Always with the focus on achieving the results they require.
               </p>
-              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-8 py-4 rounded-full font-bold text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-12 w-max">
+              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-[13px] md:text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-4 md:mt-12 w-full sm:w-max">
                 Start a Project
                 <span className="bg-white/20 backdrop-blur-md text-black w-6 h-6 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -125,10 +125,10 @@ export function Pro() {
           </m.div>
 
           {/* Cinematic 3D Abstract Graphic */}
-          <div className="w-full flex justify-center mt-12 relative h-[50vh] md:h-[60vh] rounded-[32px] overflow-hidden border border-slate-300 bg-white/5 group">
+          <div className="w-full flex justify-center mt-8 md:mt-12 relative h-[38vh] sm:h-[44vh] md:h-[60vh] rounded-[24px] md:rounded-[32px] overflow-hidden border border-slate-300 bg-white/5 group">
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10 pointer-events-none" />
              <img 
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&q=85&auto=format&fit=crop" 
+                src="/images/pro_bg.png" 
                 alt="Abstract Strategy Graphic" 
                 className="w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:scale-105 group-hover:opacity-80 transition-all duration-1000 ease-[0.16,1,0.3,1] saturate-[0.5] group-hover:saturate-100"
              />
@@ -138,18 +138,18 @@ export function Pro() {
         {/* ═══════════════════════════════════════════════════════════════════════ */}
         {/* MARKETING NEEDS (Sticky Side-Scroll) */}
         {/* ═══════════════════════════════════════════════════════════════════════ */}
-        <section className="py-[140px] px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300">
-          <div className="flex flex-col lg:flex-row gap-24 relative">
+        <section className="py-[80px] px-4 sm:px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300 md:py-[140px]">
+          <div className="flex flex-col lg:flex-row gap-12 md:gap-24 relative">
             
             {/* Left sticky headline */}
             <div className="lg:w-1/2 relative">
               <div className="lg:sticky lg:top-[30vh] h-max">
-                <h2 className="text-[clamp(50px,8vw,120px)] font-bold leading-[0.9] tracking-[-0.04em] mb-12">
+                <h2 className="text-[38px] sm:text-[46px] md:text-[clamp(50px,8vw,120px)] font-bold leading-[0.9] tracking-[-0.04em] mb-6 md:mb-12">
                   all your digital <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40 italic font-light">marketing needs</span>
                 </h2>
                 
-                <div className="mt-12 hidden lg:block w-32 h-32 relative">
+                <div className="mt-8 hidden lg:block w-32 h-32 relative">
                   {/* Abstract rotating knot/shape representation */}
                   <div className="absolute inset-0 border-4 border-[#0055ff]/30 rounded-[40%] animate-[spin_10s_linear_infinite]" />
                   <div className="absolute inset-2 border-4 border-[#00aaff]/20 rounded-[40%] animate-[spin_15s_linear_infinite_reverse]" />
@@ -158,7 +158,7 @@ export function Pro() {
             </div>
 
             {/* Right side scrolling factors */}
-            <div className="lg:w-1/2 flex flex-col gap-32 py-10 lg:pb-[20vh]">
+            <div className="lg:w-1/2 flex flex-col gap-10 md:gap-32 py-0 md:py-10 lg:pb-[20vh]">
               {MARKETING_NEEDS.map((item, i) => {
                 const Icon = item.icon;
                 return (
@@ -168,13 +168,13 @@ export function Pro() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-10%" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="group border-l-2 border-slate-300 pl-10 hover:border-[#0055ff] transition-colors duration-500"
+                    className="group border-l-0 border-slate-300 pl-0 md:border-l-2 md:pl-10 hover:border-[#0055ff] transition-colors duration-500"
                   >
-                    <Icon className="w-10 h-10 text-black/20 group-hover:text-[#0055ff] transition-colors duration-500 mb-6" />
-                    <h3 className="text-[40px] lg:text-[64px] font-bold leading-[0.95] tracking-[-0.03em] group-hover:text-black transition-colors duration-300 mb-6">
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-black/20 group-hover:text-[#0055ff] transition-colors duration-500 mb-4 md:mb-6" />
+                    <h3 className="text-[30px] md:text-[40px] lg:text-[64px] font-bold leading-[0.95] tracking-[-0.03em] group-hover:text-black transition-colors duration-300 mb-4 md:mb-6">
                       {item.title}
                     </h3>
-                    <p className="text-[20px] text-black/50 leading-[1.6] font-light max-w-md">
+                    <p className="text-base md:text-[20px] text-black/50 leading-[1.6] font-light max-w-md">
                       {item.desc}
                     </p>
                   </m.div>
@@ -188,12 +188,12 @@ export function Pro() {
         {/* ═══════════════════════════════════════════════════════════════════════ */}
         {/* SERVICES CARDS (Bento Grid) */}
         {/* ═══════════════════════════════════════════════════════════════════════ */}
-        <section className="py-[140px] px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300">
-          <div className="flex items-center gap-4 mb-20">
-            <span className="font-mono text-xs text-black/50 uppercase tracking-[0.2em]">02 – Our Services</span>
+        <section className="py-[80px] px-4 sm:px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300 md:py-[140px]">
+          <div className="flex items-center gap-4 mb-10 md:mb-20">
+            <span className="font-mono text-[10px] md:text-xs text-black/50 uppercase tracking-[0.2em]">02 – Our Services</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
             {SERVICES.map((srv, i) => (
               <m.div 
                 key={i} 
@@ -201,18 +201,18 @@ export function Pro() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className={`group relative flex flex-col p-10 lg:p-14 rounded-[40px] bg-white/[0.03] border border-slate-300 hover:bg-white/[0.06] hover:border-slate-300 transition-all duration-500 overflow-hidden ${srv.glow} ${srv.colSpan} min-h-[400px]`}
+                className={`group relative flex flex-col p-6 sm:p-8 md:p-10 lg:p-14 rounded-[28px] md:rounded-[40px] bg-white/[0.03] border border-slate-300 hover:bg-white/[0.06] hover:border-slate-300 transition-all duration-500 overflow-hidden ${srv.glow} ${srv.colSpan} min-h-[300px] md:min-h-[400px]`}
               >
                 {/* Dynamic colored background glow per card */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
                 
-                <h3 className="text-[40px] lg:text-[64px] font-bold leading-[0.9] tracking-[-0.04em] mb-8 relative z-10 max-w-[80%]">
+                <h3 className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[64px] font-bold leading-[0.9] tracking-[-0.04em] mb-5 md:mb-8 relative z-10 max-w-[80%]">
                   {srv.title.split(' ').map((word, wIdx) => (
                     <span key={wIdx} className="block">{word}</span>
                   ))}
                 </h3>
                 
-                <p className="text-[16px] leading-[1.6] text-black/60 mb-16 relative z-10 font-light max-w-lg">
+                <p className="text-sm sm:text-[15px] md:text-[16px] leading-[1.6] text-black/60 mb-8 md:mb-16 relative z-10 font-light max-w-lg">
                   {srv.desc}
                 </p>
 
@@ -229,16 +229,16 @@ export function Pro() {
         {/* ═══════════════════════════════════════════════════════════════════════ */}
         {/* CLIENTS GRID */}
         {/* ═══════════════════════════════════════════════════════════════════════ */}
-        <section className="py-[140px] px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300">
-          <div className="flex flex-col lg:flex-row gap-24 relative">
+        <section className="py-[80px] px-4 sm:px-6 lg:px-16 w-full max-w-[1600px] mx-auto relative z-10 border-t border-slate-300 md:py-[140px]">
+          <div className="flex flex-col lg:flex-row gap-12 md:gap-24 relative">
             
             {/* Left sticky headline */}
             <div className="lg:w-1/3 relative">
               <div className="lg:sticky lg:top-[30vh] h-max">
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="font-mono text-xs text-black/50 uppercase tracking-[0.2em]">03 – Our Clients</span>
+                <div className="flex items-center gap-4 mb-6 md:mb-8">
+                  <span className="font-mono text-[10px] md:text-xs text-black/50 uppercase tracking-[0.2em]">03 – Our Clients</span>
                 </div>
-                <h2 className="text-[clamp(50px,8vw,100px)] font-bold leading-[0.9] tracking-[-0.04em]">
+                <h2 className="text-[38px] sm:text-[46px] md:text-[clamp(50px,8vw,100px)] font-bold leading-[0.9] tracking-[-0.04em]">
                   We are <br />
                   trusted
                 </h2>
@@ -247,7 +247,7 @@ export function Pro() {
 
             {/* Right side logo grid */}
             <div className="lg:w-2/3">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                 {CLIENTS.map((client, i) => (
                   <m.div 
                     key={i}
@@ -255,9 +255,9 @@ export function Pro() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: (i % 3) * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="aspect-[3/2] flex flex-col items-center justify-center bg-white/[0.02] border border-slate-200 rounded-[24px] group hover:bg-white/[0.05] hover:border-slate-300 transition-colors duration-500 cursor-default"
+                    className="aspect-[3/2] flex flex-col items-center justify-center bg-white/[0.02] border border-slate-200 rounded-[20px] md:rounded-[24px] group hover:bg-white/[0.05] hover:border-slate-300 transition-colors duration-500 cursor-default"
                   >
-                    <span className="font-bold text-xl tracking-widest text-black/40 group-hover:text-black transition-colors duration-500 text-center px-4">
+                    <span className="font-bold text-sm sm:text-base md:text-xl tracking-widest text-black/40 group-hover:text-black transition-colors duration-500 text-center px-2 md:px-4">
                       {client.logo}
                     </span>
                   </m.div>

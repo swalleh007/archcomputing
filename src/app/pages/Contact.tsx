@@ -5,7 +5,7 @@ export function Contact() {
   const [, setSearchParams] = useSearchParams();
 
   return (
-    <div className="bg-[#060509] min-h-screen text-black relative flex items-center justify-center overflow-hidden">
+    <div className="bg-[#ffffff] min-h-screen text-black relative flex items-center justify-center overflow-hidden">
 
       {/* Intro State */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 pointer-events-auto w-full max-w-4xl mx-auto">
@@ -31,7 +31,7 @@ export function Contact() {
 
         <motion.button
           onClick={() => setSearchParams((prev) => { prev.set("contact", "true"); return prev; })}
-          className="bg-gradient-primary px-10 py-5 rounded-full font-bold text-black text-lg flex items-center gap-3 hover:shadow-[0_0_30px_rgba(247,165,33,0.6)] transition-all active:scale-95"
+          className="bg-gradient-primary px-10 py-5 rounded-full font-bold text-white text-lg flex items-center gap-3 hover:shadow-[0_0_30px_rgba(78,38,255,0.6)] transition-all active:scale-95"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}

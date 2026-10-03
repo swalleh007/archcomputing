@@ -76,7 +76,7 @@ export function MetricsSection() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "clamp(14px, 1.5vw, 18px)",
                   fontWeight: 600,
-                  color: "#6366F1",
+                  color: "#4c4c4e",
                   textTransform: "uppercase",
                   letterSpacing: "0.2em",
                 }}

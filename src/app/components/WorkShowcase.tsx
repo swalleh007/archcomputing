@@ -6,22 +6,22 @@ const PROJECTS = [
   {
     title: "Arch AI",
     category: "Machine Learning",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/aura_ai_chat.png",
   },
   {
     title: "Vanguard",
     category: "Fintech Platform",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/pro_bg.png",
   },
   {
     title: "Elysium",
     category: "Web Architecture",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/web_bg.png",
   },
   {
     title: "Nexis",
     category: "Enterprise Cloud",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/bakery_landing.png",
   },
 ];
 

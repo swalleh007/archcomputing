@@ -14,28 +14,28 @@ const ARTICLES = [
     category: "Product",
     title: "Introducing Arch AI — intelligence built for African enterprises",
     date: "Mar 12, 2026",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/aura_ai_chat.png",
   },
   {
     id: 2,
     category: "Engineering",
     title: "Why we ship React-first, performance-obsessed web systems",
     date: "Feb 28, 2026",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/web_bg.png",
   },
   {
     id: 3,
     category: "Design",
     title: "Brand systems that scale across 24 markets",
     date: "Feb 14, 2026",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/team_artifact_1782480085547.png",
   },
   {
     id: 4,
     category: "Agency",
     title: "From Mukono to the world — our studio story",
     date: "Jan 30, 2026",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/pro_bg.png",
   },
 ];
 

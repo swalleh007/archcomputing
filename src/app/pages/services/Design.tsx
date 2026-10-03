@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { ArrowRight, ArrowUpRight, Code, PenTool, Layout, Box, MonitorSmartphone, PenLine } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════
-// arch computing: the antigravity signature design
+// arch: the antigravity signature design
 // cyber-luxury / dark mode / high-end tech agency
 // ═══════════════════════════════════════════════════════════════════════
 
@@ -57,25 +57,25 @@ const CASES = [
     title: "Helio FinTech App",
     category: "Product UI/UX",
     date: "09.24",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/pro_bg.png"
   },
   {
     title: "Aura Skincare Rebrand",
     category: "Brand Identity",
     date: "08.24",
-    img: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/aura_ai_chat.png"
   },
   {
     title: "Merida Labs Dashboard",
     category: "Product UI/UX",
     date: "07.24",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/web_bg.png"
   },
   {
     title: "Vanguard Architecture",
     category: "Web Design",
     date: "06.24",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=85&auto=format&fit=crop"
+    img: "/images/team_artifact_1782480085547.png"
   }
 ];
 
@@ -135,7 +135,7 @@ export function Design() {
                 </div>
                 <div className="text-4xl font-bold">98<span className="text-[#00ff66]">%</span></div>
               </div>
-              <button onClick={() => navigate("?contact=true")} className="w-full lg:w-auto bg-gradient-primary text-black px-10 py-5 rounded-full font-bold text-[15px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300 group">
+              <button onClick={() => navigate("?contact=true")} className="w-full lg:w-auto bg-gradient-primary text-white px-10 py-5 rounded-full font-bold text-[15px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300 group">
                 Initiate Project 
                 <span className="bg-white/20 backdrop-blur-md text-black w-6 h-6 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -273,7 +273,7 @@ export function Design() {
                 <p className="text-xl text-black/60 leading-[1.6] max-w-lg mb-12 font-light">
                   A remarkable result is the consequence of elite execution. We manage the process entirely, allowing you to focus on your business.
                 </p>
-                <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-10 py-5 rounded-full font-bold text-[15px] flex items-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300">
+                <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-white px-10 py-5 rounded-full font-bold text-[15px] flex items-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300">
                   Start a Project <ArrowUpRight className="w-5 h-5" />
                 </button>
               </div>

@@ -106,7 +106,7 @@ export function AuraAISection() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(18px, 2.5vw, 24px)",
-            color: "#475569",
+            color: "#2b333d",
             lineHeight: 1.55,
             marginBottom: "48px",
           }}
@@ -141,7 +141,7 @@ export function AuraAISection() {
               }}
             >
               <div className="absolute top-[-30px] right-[-30px] w-32 h-32 bg-[#6366F1]/10 blur-3xl rounded-full pointer-events-none" />
-              <feat.Icon size={24} color="#6366F1" className="mb-3" />
+              <feat.Icon size={24} color="#333333" className="mb-3" />
               <div
                 style={{
                   fontFamily: "'Inter', sans-serif",
