@@ -28,7 +28,7 @@ export function CTABand() {
               <div className="flex items-center gap-3 mb-6">
                 <motion.div
                   className="rounded-full"
-                  style={{ width: "8px", height: "8px", background: "#6366F1", flexShrink: 0 }}
+                  style={{ width: "8px", height: "8px", background: "#c3c3c4", flexShrink: 0 }}
                   animate={{ scale: [1, 1.4, 1], opacity: [1, 0.4, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 />
@@ -111,7 +111,7 @@ export function CTABand() {
                       fontFamily: "'Inter', sans-serif",
                       fontSize: "10px", fontWeight: 700,
                       textTransform: "uppercase", letterSpacing: "0.12em",
-                      color: "#94A3B8",
+                      color: "#6e819c",
                     }}
                     onClick={() => {
                       const el = document.querySelector(`#${nav === "capabilities" ? "services" : nav === "cases" ? "work" : nav}`);

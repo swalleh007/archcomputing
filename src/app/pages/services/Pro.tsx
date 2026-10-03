@@ -115,7 +115,7 @@ export function Pro() {
               <p className="text-black/60 text-base md:text-lg leading-relaxed font-light mb-0 md:mb-4">
                 Combining strategy, creativity, technical ability and years of knowledge we help clients create and manage integrated digital channels that engage customers. Always with the focus on achieving the results they require.
               </p>
-              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-[13px] md:text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(78,38,255,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-4 md:mt-12 w-full sm:w-max">
+              <button onClick={() => navigate("?contact=true")} className="bg-gradient-primary text-black px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-[13px] md:text-[14px] flex items-center justify-center gap-3 hover:shadow-[0_0_25px_rgba(247,165,33,0.5)] hover:-translate-y-1 transition-all duration-300 group mt-4 md:mt-12 w-full sm:w-max">
                 Start a Project
                 <span className="bg-white/20 backdrop-blur-md text-black w-6 h-6 rounded-full flex items-center justify-center group-hover:bg-white/40 transition-colors">
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />

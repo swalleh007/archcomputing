@@ -321,21 +321,12 @@ export class SupportParticleEngine {
 
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
-
-        const canvasContext = canvas.getContext('webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' })
-            ?? canvas.getContext('experimental-webgl', { antialias: true, alpha: true, powerPreference: 'high-performance' });
-
-        if (!canvasContext) {
-            throw new Error('WebGL context unavailable');
-        }
-
         this.renderer = new THREE.WebGLRenderer({
             canvas: canvas,
             antialias: true,
             alpha: true,
             powerPreference: 'high-performance',
             preserveDrawingBuffer: false,
-            context: canvasContext,
         });
 
         // Strict PixelRatio management: cap at 2 for optimal sharpness on Retina displays
@@ -584,7 +575,7 @@ export class SupportParticleEngine {
     private then = Date.now();
 
     private animate = () => {
-        if (this.isDestroyed || !this.renderer) return;
+        if (this.isDestroyed) return;
         this.frameId = requestAnimationFrame(this.animate);
         
         if (this.fpsInterval > 0) {
@@ -600,8 +591,6 @@ export class SupportParticleEngine {
     }
 
     public render() {
-        if (!this.renderer || !this.renderMaterial || !this.simMaterial) return;
-
         const time = this.clock.getElapsedTime();
         const dt = time - this.lastTime;
         this.lastTime = time;
